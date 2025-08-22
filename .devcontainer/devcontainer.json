@@ -1,0 +1,14 @@
+{
+  "name": "Linux GUI Firefox",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Firefox GUI",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bash start-vnc.sh"
+}
